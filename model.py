@@ -29,7 +29,7 @@ class Person:
         self.packet = list()
         self.debuff = list()
 
-        self.pos = [random.randint(1,10),random.randint(1,10)]
+        self.pos = [random.randint(3,6),random.randint(3,6)]
 
     def life_check(self):
         '''check if this person is in normal status'''
