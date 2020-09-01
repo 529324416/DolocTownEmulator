@@ -19,23 +19,20 @@ class Food(__stuff):
 
         super(Food,self).__init__(StuffType.CAN_BE_ATE)
         self.name = name
-        self.value = value
+        self.price = value
 
     def initialize_properties(self,food,drink,energy,energy_ex):
         ''' the food can be used for life support'''
 
-        self.food = food
-        self.drink = drink
-        self.energy = energy
-        self.energy_ex = energy_ex
+        self.properties = [food,drink,energy,energy_ex]
 
     def total_value(self):
 
-        return self.food + self.drink + self.energy_ex + self.energy
+        return sum(self.properties)
 
     def __repr__(self):
 
-        return f"<({self.name},${self.value}),({self.food},{self.drink},{self.energy},{self.energy_ex})>"
+        return f"<({self.name},${self.price}),{self.properties}>"
 
     @staticmethod
     def generate_food(name,value,food,drink,e,eex):
