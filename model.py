@@ -233,7 +233,7 @@ class Game:
 
     def __init__(self):
 
-        self.worker = Person("王子饼干")
+        self.worker = Person("PrinceBiscuit")
         self.shop = Shop()
 
     def entry(self):
